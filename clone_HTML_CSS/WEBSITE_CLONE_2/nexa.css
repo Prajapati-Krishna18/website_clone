@@ -1,0 +1,747 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+.brand {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://media.zigcdn.com/media/model/2025/May/model-extimg-2026147304_600x400.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    position: relative;
+    margin-top: 25px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: #00baff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-style: italic;
+    color: #d3d0d0;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 20px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 0px;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #000;
+    border: none;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px 0;
+}
+
+.btn-primary:hover {
+    background: grey;
+    color: white;
+}
+
+.discover-section{
+    background-image: url(https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:affb8650-ad1e-47af-a14d-11133eda3c45/as/desktop_1366x542.png?width=2000&id=1&preferwebp=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 500px;
+    border: none;
+}
+
+.discover-text {
+    margin-top: 12px;
+}
+
+.discover-text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    line-height: 1.1;
+}
+
+.discover-text p {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    margin-left: 50px;
+}
+
+.discover-text .btn {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 18px 40px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px 0px 30px 0px;
+    transition: all 0.3s ease;
+    position: relative;
+    margin-left: 50px;
+}
+
+.discover-text .btn:hover {
+    background: #ddd;
+    transform: translateY(-2px);
+}
+
+.discover-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://m.media-amazon.com/images/I/71OPT0EeD4L.jpg);
+    background-size: contain;
+}
+
+.discover-image img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+
+    filter: brightness(50%);
+}
+
+.experience-grid {
+  display: flex;
+  padding: 50px 60px; 
+  gap: 20px;
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.grid-left {
+  flex: 6;
+}
+
+.grid-right {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-test-drive,
+.card-accessories {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-test-drive {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%), url('https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:67125a75-e90b-449c-923f-3812dc2390f5/as/IMG0185.jpg?height=4912&width=750&id=1&preferwebp=true'); 
+}
+
+.card-accessories {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:73825235-22a6-4864-b869-001d439ea284/as/nexa-day-2-3495.jpg?height=4912&width=750&id=1&preferwebp=true'); 
+}
+
+.card-content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #eee;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.btn-card-white {
+  background: #fff;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn-card-white:hover {
+  background: #ddd;
+}
+
+.btn-card-white-outline {
+  background: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.btn-card-white-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+.right-bottom-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card-services,
+.card-book {
+  flex: 1;
+  padding: 30px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-services {
+  background: #e0e0e0;
+  color: #000;
+}
+
+.card-book {
+  background: #111;
+  color: #fff;
+}
+
+.card-services h4,
+.card-book h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-services p,
+.card-book p {
+  font-size: 0.9rem;
+  color: #aaa;
+  flex-grow: 1;
+}
+
+.card-book p {
+  color: #888;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card-link i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.showroom-locator {
+    padding: 60px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.locator-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.locator-content {
+    display: flex;
+    gap: 40px;
+}
+
+.locator-sidebar {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.sidebar-text {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    color: #000;
+    border: none;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #555;
+}
+
+.explore-btn .fas {
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.showroom-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.showroom-item {
+    display: flex;
+    align-items: center;
+    background-color: #2c2c2c; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.showroom-item:hover {
+    transform: translateY(-3px);
+}
+
+.showroom-img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.showroom-details {
+    flex-grow: 1; 
+}
+
+.showroom-details h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.showroom-details .distance {
+    font-size: 1rem;
+    color: #00bfff;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.showroom-details .address {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+.navigate-link {
+    display: flex;
+    align-items: center;
+    color: #00bfff; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.navigate-link:hover {
+    text-decoration: underline;
+}
+
+.navigate-link .fas {
+    margin-left: 8px;
+    font-size: 0.8em;
+}
+
+.nexa-world-section {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #1a1a1a;
+}
+
+.nexa-world-content {
+    flex: 1;
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1a1a1a;
+    position: relative;
+    z-index: 2;
+}
+
+.nexa-world-subtitle {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    margin-bottom: 5px;
+}
+
+.nexa-world-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.nexa-world-description {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.6;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+
+.nexa-world-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;    
+}
+
+.nexa-world-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.nexa-world-image {
+    flex: 1;
+    background-image: url('https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:b13fd368-c906-4996-b028-3a38cc3590d1/as/Home-page_Travel.png?width=2000&id=1&preferwebp=true');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.nexa-world-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -55%;
+    width: 60%; 
+    height: 100%;
+    background-color: #1a1a1a;
+    transform-origin: top left;
+    transform: skewX(-15deg);
+    z-index: 2; 
+}
+
+.nexa-world-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(26, 26, 26, 0.5) 0%, rgba(26, 26, 26, 0) 50%);
+    z-index: 1;
+}
+
+.nexa-world-content * {
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width: 900px) {
+    .nexa-world-section {
+        flex-direction: column;
+    }
+
+    .nexa-world-content {
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    .nexa-world-title {
+        font-size: 2.5rem;
+    }
+
+    .nexa-world-description {
+        max-width: 100%;
+    }
+
+    .nexa-world-image {
+        min-height: 400px;
+    }
+
+    .nexa-world-section::after {
+        display: none;
+    }
+    .nexa-world-image::before {
+        background: linear-gradient(to top, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0) 50%);
+    }
+}
+
+@media (max-width: 600px) {
+    .nexa-world-content {
+        padding: 40px 20px;
+    }
+    .nexa-world-title {
+        font-size: 2rem;
+    }
+}
+
+.site-footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 60px 80px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-title h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.link-column {
+    flex: 1;
+}
+
+.link-column h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-toggle {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.footer-toggle .fas {
+    font-size: 1rem;
+    color: #fff;
+    background: #333;
+    padding: 8px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.footer-disclaimer {
+    display: flex;
+    gap: 40px;
+    font-size: 0.75rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.footer-disclaimer p {
+    flex: 1;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-links a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.bottom-links a:hover {
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .nexa-world-section {
+        flex-direction: column; 
+    }
+    .nexa-world-content {
+        padding: 60px 30px;
+        text-align: center;
+    }
+    .nexa-world-description {
+        max-width: 100%;
+    }
+    .nexa-world-btn {
+        margin: 0 auto;
+    }
+    .nexa-world-image {
+        min-height: 400px;
+    }
+    .nexa-world-section::after {
+        display: none;
+    }
+
+    .locator-content {
+        flex-direction: column;
+    }
+    .showroom-locator, .site-footer {
+        padding: 40px 30px;
+    }
+
+    .showroom-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .navigate-link {
+        align-self: flex-end;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-disclaimer {
+        flex-direction: column;
+    }
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
